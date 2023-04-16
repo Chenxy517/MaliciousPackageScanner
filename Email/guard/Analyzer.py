@@ -1,6 +1,7 @@
 from abc import abstractmethod
 from datetime import datetime
 from typing import Optional
+import requests
 
 import whois  # type: ignore
 
