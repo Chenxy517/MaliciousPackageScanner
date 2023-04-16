@@ -5,17 +5,13 @@ import requests
 
 import whois  # type: ignore
 
-from guard.detector import Detector
 
-
-class EmailAnalyzer(Detector):
+"""
+Analyzer is the parent class of npm_analyzer and pypi_analyzer
+"""
+class Analyzer:
     # The name of the rule is dependent on the ecosystem and is provided by the implementing subclasses
     def __init__(self, ecosystem: str):
-        super().__init__(
-            name="potentially_compromised_email_domain",
-            description="Identify when a package maintainer e-mail domain (and therefore package manager account) "
-                        "might have been compromised",
-        )
         self.ecosystem = ecosystem
 
     def _get_domain_creation_date(self, email_domain) -> tuple[Optional[datetime], bool]:
@@ -59,7 +55,7 @@ class EmailAnalyzer(Detector):
         Raises:
             Exception: "Email for {package_info['info']['name']} does not exist."
         Returns:
-            bool: True if email domain is compromised
+            bool: True if email address has issue
         """
 
         emails = self.get_email_addresses(package_info)
@@ -112,6 +108,12 @@ class EmailAnalyzer(Detector):
                 messages.append(f"Request failed with status code {response.status_code}: {response.reason}")
 
         return has_issues, "\n".join(messages)
+
+    def get_name(self) -> str:
+        return "email_analyzer"
+
+    def get_description(self) -> str:
+        return self.description
 
     @abstractmethod
     def get_project_latest_release_date(self, package_info):
