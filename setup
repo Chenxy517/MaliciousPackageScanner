@@ -1,0 +1,15 @@
+from setuptools import setup
+
+setup(
+    name='my-program',
+    version='0.1',
+    py_modules=['my_program'],
+    entry_points={
+        'console_scripts': [
+            'my_command=my_program.main:main'
+        ]
+    },
+    install_requires=[
+        'numpy'
+    ]
+)
