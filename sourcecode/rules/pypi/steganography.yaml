@@ -1,0 +1,22 @@
+rules:
+  - name: large_files
+    description: Check for large files in the package
+    conditions:
+      - file_size: '>1000000' # 1 MB
+
+  - name: suspicious_image_formats
+    description: Check for suspicious image formats
+    conditions:
+      - file_extension: ['.bmp', '.tiff']
+
+  - name: encoded_data_in_text_files
+    description: Check for base64 encoded data in text files
+    conditions:
+      - file_extension: ['.txt', '.py', '.html']
+      - content_pattern: 'data:([a-zA-Z0-9-_/]+);base64,'
+
+  - name: suspicious_comments
+    description: Check for suspicious comments in code
+    conditions:
+      - file_extension: ['.py']
+      - content_pattern: '#[a-zA-Z0-9+/]{32,}[=]{0,2}'

@@ -1,14 +1,22 @@
 import os
 import re
 import yaml
-from Analyzer import Analyzer
 from typing import Optional
 
 
+class Analyzer:
+    def __init__(self, ecosystem: str):
+        self.ecosystem = ecosystem
+
+    # Other methods can be added here...
+
+
 class SourceAnalyzer(Analyzer):
-    def __init__(self, ecosystem: str, rules_dir: str):
+    def __init__(self, ecosystem: str):
         super().__init__(ecosystem)
+        rules_dir = os.path.join("rules", ecosystem.lower())
         self.rules = self._load_rules(rules_dir)
+
 
     def _load_rules(self, rules_dir: str):
         rules = []
@@ -19,14 +27,14 @@ class SourceAnalyzer(Analyzer):
                     rules.extend(data['rules'])
         return rules
 
-    
-    def detect(self, package_info, path: Optional[str] = None, name: Optional[str] = None,
-               version: Optional[str] = None) -> tuple[bool, str]:
+
+    def detect(self, path: Optional[str] = None, name: Optional[str] = None,
+           version: Optional[str] = None) -> tuple[bool, str]:
         """
         Uses a package's source code to determine if the package contains any
-        malware heuristics.
+        malware.
         Args:
-            package_info (dict): dictionary representation of package information
+            path (str): The path to the directory containing the package's source code.
         Returns:
             bool: True if malware is detected
             str:  A message describing the malware detected
@@ -34,6 +42,17 @@ class SourceAnalyzer(Analyzer):
         has_issues = False
         messages = []
         
+        package_info = {"source_code": []}
+
+        # Read source code files from the directory
+        if path is not None and os.path.isdir(path):
+            for root, _, files in os.walk(path):
+                for file in files:
+                    filepath = os.path.join(root, file)
+                    with open(filepath, "r", encoding="utf-8", errors="ignore") as f:
+                        content = f.readlines()
+                        package_info["source_code"].extend(content)
+
         # Look for patterns in the source code that match the rules defined in the YAML file
         if "source_code" in package_info:
             for rule in self.rules:
@@ -44,5 +63,6 @@ class SourceAnalyzer(Analyzer):
                     if re.search(pattern, line):
                         has_issues = True
                         messages.append(f"The package's source code matches the {rule['name']} rule: {rule['description']}")
-        
+
         return has_issues, "\n".join(messages)
+
