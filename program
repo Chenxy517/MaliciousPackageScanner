@@ -1,0 +1,28 @@
+import json
+from datetime import datetime
+from npm_Analyzer import npm_Analyzer
+import argparse
+
+def main():
+    parser = argparse.ArgumentParser(description='Analyze a JSON file for malicious packages')
+    parser.add_argument('-f', '--file', type=str, required=True,
+                        help='JSON file to be analyzed')
+    args = parser.parse_args()
+
+    filename = args.file
+
+
+    with open(filename, 'r') as f:
+        package_info = json.load(f)
+
+
+    analyzer = npm_Analyzer()
+
+    email_addresses = analyzer.get_email_addresses(package_info)
+    print(email_addresses)
+
+    latest_release_date = analyzer.get_project_latest_release_date(package_info)
+    print(latest_release_date)
+
+if __name__ == '__main__':
+    main()
