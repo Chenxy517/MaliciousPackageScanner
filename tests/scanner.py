@@ -50,6 +50,8 @@ class Analyzer:
             # The domain doesn't exist at all, if that's the case we consider it vulnerable
             # since someone could register it
             return None, (not str(e).lower().startswith('no match for'))
+        if domain_information["domain_name"] is None:
+            return None, False
 
         if domain_information.creation_date is None:
             # No creation date in whois, so we can't know
@@ -78,8 +80,8 @@ class Analyzer:
 
         emails = self.get_email_addresses(package_info)
         #print(len(emails))
-        print(emails)
-        if len(emails) == 0:
+        print("emails:",emails)
+        if emails is None or len(emails) == 0:
             # No e-mail is set for this package, hence no risk
             return False, "No e-mail found for this package"
 
@@ -91,6 +93,8 @@ class Analyzer:
             sanitized_email = email.strip().replace(">", "").replace("<", "")
             email_domain = sanitized_email.split("@")[-1]
             domain_creation_date, domain_exists = self._get_domain_creation_date(email_domain)
+            print("domain creation date:",domain_creation_date)
+            print("latest release:",latest_project_release)
 
             if not domain_exists:
                 has_issues = True
@@ -151,7 +155,10 @@ class npm_Analyzer(Analyzer):
     
     def get_email_addresses(self, package_info: dict) -> List[str]:
         #print(package_info)
-        return list(map(lambda x: x["email"], package_info["author"]))
+        if package_info.get("author") is not None:
+                return list(map(lambda x: x["email"], package_info["author"]))
+        else:
+            return None
 
     def get_project_latest_release_date_(self, package_info) -> Optional[datetime]:
         """
@@ -361,10 +368,8 @@ def get_package_info(name: str) -> dict:
 
     return data
 
-def test_pypi_metadata():
-    #metadata=get_setup_metadata("setup.py")
-    name=get_name()
-    metadata=get_package_info(name)
+def test_pypi_metadata(path):
+    metadata=get_json_files_info(path)
     analyzer = pypi_Analyzer()
     has_issues, messages = analyzer.detect(metadata)
     assert not has_issues, messages
@@ -375,7 +380,7 @@ def test_pypi_sourcecode():
 
     analyzer = SourceAnalyzer(ecosystem)
     has_issues, messages = analyzer.detect(path=directory)
-
+    
     if has_issues:
         print("Potential malware detected:")
         print(messages)
@@ -384,18 +389,14 @@ def test_pypi_sourcecode():
     return directory
 
 def test_npm_metadata(path):
-    #with open("npm_data.json") as f:
-        #metadata = json.load(f)
     metadata=get_json_files_info(path)
     metadata=metadata
-    #print(metadata)
     analyzer = npm_Analyzer()
     has_issues, messages = analyzer.detect(metadata)
     assert not has_issues, messages
 
 def test_npm_sourcecode():
     ecosystem="NPM"
-    #ecosystem = get_ecosystem()
     directory = get_directory()
 
     analyzer = SourceAnalyzer(ecosystem)
@@ -416,6 +417,6 @@ def main():
         test_npm_metadata(directory)
     if ecosystem=="PYPI":
         directory=test_pypi_sourcecode()
-        test_pypi_metadata()
+        test_pypi_metadata(directory)
     print("All tests passed.")
 main()
