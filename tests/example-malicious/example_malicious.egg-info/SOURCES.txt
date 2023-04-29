@@ -1,0 +1,7 @@
+README.md
+setup.py
+./example_malicious/__init__.py
+example_malicious.egg-info/PKG-INFO
+example_malicious.egg-info/SOURCES.txt
+example_malicious.egg-info/dependency_links.txt
+example_malicious.egg-info/top_level.txt
