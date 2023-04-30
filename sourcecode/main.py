@@ -28,7 +28,7 @@ def main():
     has_issues, messages = analyzer.detect(path=directory)
 
     if has_issues:
-        print("Potential malware detected:")
+        print("\nPotential malware detected:\n")
         print(messages)
     else:
         print("No issues detected.")

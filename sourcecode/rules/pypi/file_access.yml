@@ -1,0 +1,12 @@
+rules:
+  - name: Access to .ssh directory
+    description: Detects access to the .ssh directory, which may indicate attempts to steal SSH keys or manipulate SSH configurations
+    pattern: 'os.path.join\(os.environ\["HOME"\], ".ssh"\)'
+
+  - name: Access to /etc/passwd
+    description: Detects access to the /etc/passwd file, which may indicate attempts to read sensitive user information
+    pattern: 'open\("/etc/passwd", "r"\)'
+
+  - name: Access to environment variables
+    description: Detects access to environment variables, which may indicate attempts to gather information about the user or system environment
+    pattern: 'os.getenv\('

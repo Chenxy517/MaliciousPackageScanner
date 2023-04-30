@@ -1,7 +1,3 @@
-name: Persistence Mechanisms
-
-description: Detects persistence mechanisms used in Python packages
-
 rules:
   - name: Hooking
     description: Detects attempts to use hooking mechanisms to execute code on system startup or shutdown

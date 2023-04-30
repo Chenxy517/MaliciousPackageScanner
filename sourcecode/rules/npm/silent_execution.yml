@@ -1,0 +1,16 @@
+rules:
+  - name: Use of child_process.exec with silent execution
+    description: Detects the use of the child_process.exec function, which may be used to execute shell commands silently
+    pattern: 'child_process.exec\((.*),(.*)(\{.*\})?(.*),.*function'
+
+  - name: Use of child_process.spawn with silent execution
+    description: Detects the use of the child_process.spawn function, which may be used to execute shell commands silently by suppressing output
+    pattern: 'child_process.spawn\((.*),(.*),(\{.*stdio: \[.*null,.*null,.*null.*\]\})'
+
+  - name: Use of child_process.execFile with silent execution
+    description: Detects the use of the child_process.execFile function, which may be used to execute shell commands silently by suppressing output
+    pattern: 'child_process.execFile\((.*),(.*),(\{.*\})?(.*),.*function'
+
+  - name: Use of child_process.spawnSync with silent execution
+    description: Detects the use of the child_process.spawnSync function, which may be used to execute shell commands silently by suppressing output
+    pattern: 'child_process.spawnSync\((.*),(.*),(\{.*stdio: \[.*null,.*null,.*null.*\]\})'

@@ -1,0 +1,20 @@
+rules:
+  - name: Use of axios to download binary
+    description: Detects the use of the axios module to download a remote binary file
+    pattern: 'axios.(get|post)\(.*(http|https|ftp)://'
+
+  - name: Use of request or request-promise to download binary
+    description: Detects the use of the request or request-promise module to download a remote binary file
+    pattern: 'request(?:-promise)?.(get|post)\(.*(http|https|ftp)://'
+
+  - name: Use of child_process to download binary with wget
+    description: Detects the use of child_process to download a remote binary file with wget
+    pattern: 'child_process.(exec|spawn|execFile|spawnSync).*wget.*(http|https|ftp)://'
+
+  - name: Use of child_process to download binary with curl
+    description: Detects the use of child_process to download a remote binary file with curl
+    pattern: 'child_process.(exec|spawn|execFile|spawnSync).*curl.*(http|https|ftp)://'
+
+  - name: Make remote binary executable
+    description: Detects the use of fs.chmod or child_process to make a remote binary executable
+    pattern: 'fs.chmod\(.*, (0o)?(755|777)\)|(child_process.(exec|spawn|execFile|spawnSync).*chmod.*(u+x|x+|755|777))'

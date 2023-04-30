@@ -1,0 +1,20 @@
+rules:
+  - name: Use of urllib to download binary
+    description: Detects the use of the urllib module to download a remote binary file
+    pattern: 'urllib(?:2)?.(?:urlretrieve|urlopen)\(.*(http|https|ftp)://'
+
+  - name: Use of requests to download binary
+    description: Detects the use of the requests module to download a remote binary file
+    pattern: 'requests.(get|post)\(.*(http|https|ftp)://'
+
+  - name: Use of wget to download binary
+    description: Detects the use of wget to download a remote binary file
+    pattern: '(os.system|os.popen|subprocess\.Popen|subprocess\.run).*wget.*(http|https|ftp)://'
+
+  - name: Use of curl to download binary
+    description: Detects the use of curl to download a remote binary file
+    pattern: '(os.system|os.popen|subprocess\.Popen|subprocess\.run).*curl.*(http|https|ftp)://'
+
+  - name: Make remote binary executable
+    description: Detects the use of chmod or os.chmod to make a remote binary executable
+    pattern: '(os.system|os.popen|subprocess\.Popen|subprocess\.run).*chmod.*(u+x|x+|755|777)|os.chmod\(.*, (0o)?(755|777)\)'
