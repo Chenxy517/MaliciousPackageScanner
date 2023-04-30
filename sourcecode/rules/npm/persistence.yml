@@ -1,0 +1,23 @@
+name: Persistence Mechanisms
+
+description: Detects persistence mechanisms used in NPM packages
+
+rules:
+  - name: Cron Job
+    description: Detects attempts to create or modify cron jobs for persistence
+    pattern: >
+      (crontab|cron.schedule|node-cron|node-schedule)
+      .* # Any number of characters
+      (create|add|set|modify|write)
+  - name: Scheduled Task
+    description: Detects attempts to create or modify Windows scheduled tasks for persistence
+    pattern: >
+      (node-windows|node-powershell|node-win32-automation|node-powershell-win32ole|node-taskscheduler)
+      .* # Any number of characters
+      (create|add|set|modify|write)
+  - name: Service
+    description: Detects attempts to create or modify Windows services for persistence
+    pattern: >
+      (node-windows|node-windows-service)
+      .* # Any number of characters
+      (create|add|set|modify|write)

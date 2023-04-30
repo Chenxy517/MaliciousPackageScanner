@@ -1,0 +1,26 @@
+name: Persistence Mechanisms
+
+description: Detects persistence mechanisms used in Python packages
+
+rules:
+  - name: Hooking
+    description: Detects attempts to use hooking mechanisms to execute code on system startup or shutdown
+    pattern: >
+      (win32api.SetConsoleCtrlHandler|win32api.SetUnhandledExceptionFilter|ctypes.windll.kernel32.SetConsoleCtrlHandler)
+      .* # Any number of characters
+      (\(|\s+)(win32api.PostQuitMessage|ctypes.windll.kernel32.ExitProcess|os._exit)\(
+
+  - name: Registry Key
+    description: Detects attempts to create or modify registry keys used for persistence
+    pattern: >
+      ((?<!def\s)(?<!# )winreg|win32api.RegOpenKeyEx|win32api.RegSetValueEx|_winreg.OpenKey|
+      _winreg.SetValueEx|win32con.KEY_WRITE)
+      .* # Any number of characters
+      (createkey|createkeyex|regopenkey|regopenkeyex|regsetvalue|regsetvalueex)
+      
+  - name: Startup Folder
+    description: Detects attempts to add a file or shortcut to the user's startup folder
+    pattern: >
+      (os.path.expanduser|os.getenv|_winreg.OpenKey)
+      .* # Any number of characters
+      ([\\\\/]Startup|startmenu\\Startup|shell:Startup)

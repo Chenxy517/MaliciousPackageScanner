@@ -1,0 +1,14 @@
+rules:
+  - name: Check for base64-encoded strings
+    description: Checks if the file contains base64-encoded strings, which may indicate code obfuscation.
+    pattern: '[A-Za-z0-9+/]{40,}'
+
+
+  - name: Check for XOR-encoded strings
+    description: Checks if the file contains XOR-encoded strings, which may indicate code obfuscation.
+    pattern: '\b((?:\\x[0-9A-Fa-f]{2}){3,})+\s*([\)|;])?'
+
+  - name: Check for long strings of null bytes
+    description: Checks if the file contains long strings of null bytes, which may indicate code obfuscation.
+    pattern: '\\x00{50,}'
+
