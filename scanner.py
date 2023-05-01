@@ -1,4 +1,16 @@
 import json
+import os
+import re
+import yaml
+import requests
+import whois
+import argparse
+import logging
+import tarsafe 
+import requests
+import pathlib
+import typing
+from urllib.parse import urlparse
 from abc import abstractmethod
 from datetime import datetime
 from typing import Optional
@@ -7,21 +19,9 @@ from packaging import version
 from pathlib import Path
 from typing import Optional, Tuple
 from typing import List
-import argparse
-
-import logging
-import tarsafe 
-import requests
-
 log = logging.getLogger("guarddog")
 
-import os
-import re
-import yaml
 
-import requests
-
-import whois  # type: ignore
 from whois.parser import PywhoisError
 
 """
@@ -155,8 +155,8 @@ class npm_Analyzer(Analyzer):
     
     def get_email_addresses(self, package_info: dict) -> List[str]:
         #print(package_info)
-        if package_info.get("author") is not None:
-                return list(map(lambda x: x["email"], package_info["author"]))
+        if package_info.get("maintainers") is not None:
+                 return list(map(lambda x: x["email"], package_info["maintainers"]))
         else:
             return None
 
@@ -423,6 +423,39 @@ def download_package(package_name, directory, version=None) -> str:
         else:
             raise Exception("Version " + version + " for package " + package_name + " doesn't exist.")
 
+def download_and_get_package_info(directory: str, package_name: str, version=None) -> typing.Tuple[dict, str]:
+        git_target = None
+        if urlparse(package_name).hostname is not None and package_name.endswith('.git'):
+            git_target = package_name
+
+        if not package_name.startswith("@") and package_name.count("/") == 1:
+            git_target = f"https://github.com/{package_name}.git"
+
+        if git_target is not None:
+            raise Exception("Git targets are not yet supported for npm")
+
+        url = f"https://registry.npmjs.org/{package_name}"
+        log.debug(f"Downloading NPM package from {url}")
+        response = requests.get(url)
+
+        if response.status_code != 200:
+            raise Exception("Received status code: " + str(response.status_code) + " from npm")
+        data = response.json()
+        if "name" not in data:
+            raise Exception(f"Error retrieving package: {package_name}")
+        # if version is none, we only scan the last package
+        # TODO: figure logs and log it when we do that
+        version = data["dist-tags"]["latest"] if version is None else version
+
+        details = data["versions"][version]
+
+        tarball_url = details["dist"]["tarball"]
+        file_extension = pathlib.Path(tarball_url).suffix
+        zippath = os.path.join(directory, package_name.replace("/", "-") + file_extension)
+        unzippedpath = zippath.removesuffix(file_extension)
+        download_compressed(tarball_url, zippath, unzippedpath)
+
+        return data, unzippedpath
 
 def get_name() -> str:
     while True:
@@ -482,41 +515,40 @@ def test_pypi_sourcecode(name):
         print("No issues detected in source code.")
     return has_issues
 
-def test_npm_metadata(path):
-    metadata=get_json_files_info(path)
-    metadata=metadata
+def test_npm_metadata(info):
+    #metadata=get_json_files_info(path)
+    metadata=info
     analyzer = npm_Analyzer()
     has_issues, messages = analyzer.detect(metadata)
-    if has_issues is True:
-        print(messages)
+    assert not has_issues, messages
 
-def test_npm_sourcecode():
+def test_npm_sourcecode(path):
     ecosystem="NPM"
     #directory = get_directory()
-    directory="./download/EC521-malice-package1"
 
     analyzer = SourceAnalyzer(ecosystem)
-    has_issues, messages = analyzer.detect(path=directory)
+    has_issues, messages = analyzer.detect(path)
 
     if has_issues:
         print("Potential malware detected:")
         print(messages)
     else:
-        print("No issues detected in source code.")
+        print("No issues detected.")
     return has_issues
 
 
 def main():
-    #ecosystem = get_ecosystem()
-    ecosystem="PYPI"
+    ecosystem = get_ecosystem()
     if ecosystem=="NPM":
-        directory=test_npm_sourcecode()
-        test_npm_metadata(directory)
+        name=get_name()
+        info,path=download_and_get_package_info("./download_npm",name)
+        test_npm_metadata(info)
+        test_npm_sourcecode(path)
     if ecosystem=="PYPI":
         name=get_name()
         download_package(name,"./download")
-        m_issues=test_pypi_metadata(name)
-        s_issues=test_pypi_sourcecode(name)
-        if m_issues is False and s_issues is False:
-            print("All tests passed.")
+        test_pypi_metadata(name)
+        has_issues=test_pypi_sourcecode(name)
 main()
+#EC521-malice-package1
+#simple_draw
