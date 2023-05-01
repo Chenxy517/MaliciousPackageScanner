@@ -1,32 +1,16 @@
 rules:
   - name: Check for base64-encoded strings
-    type: ContentCheck
     description: Checks if the file contains base64-encoded strings, which may indicate code obfuscation.
-    patterns:
-      - regex: '[A-Za-z0-9+/]{40,}'
-        description: Base64-encoded string
-        severity: High
-
-  - name: Check for XOR-encoded strings
-    type: ContentCheck
-    description: Checks if the file contains XOR-encoded strings, which may indicate code obfuscation.
-    patterns:
-      - regex: '\b((?:\\x[0-9A-Fa-f]{2}){3,})+\s*([\)|;])?'
-        description: XOR-encoded string
-        severity: High
-
-  - name: Check for long strings of null bytes
-    type: ContentCheck
-    description: Checks if the file contains long strings of null bytes, which may indicate code obfuscation.
-    patterns:
-      - regex: '\\x00{50,}'
-        description: Long string of null bytes
-        severity: Medium
-
-  - name: Check for packed code
-    type: FileCheck
-    description: Checks if the file is packed, which may indicate code obfuscation.
-    patterns:
-      - regex: 'Packed by:\s+(\S+)\s*'
-        description: Packed code
-        severity: High
+    conditions:
+      - file_extension: [".js"]
+    pattern: '[A-Za-z0-9+/]{40,}'
+  - name: Check for eval function
+    description: Checks if the file contains the eval function, which may indicate code obfuscation.
+    conditions:
+      - file_extension: [".js"]
+    pattern: 'eval\s*\('
+  - name: Check for obfuscated variable names
+    description: Checks if the file contains short, meaningless variable names, which may indicate code obfuscation.
+    conditions:
+      - file_extension: [".js"]
+    pattern: '\b\w{1,3}\b'
