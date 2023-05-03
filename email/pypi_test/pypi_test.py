@@ -13,6 +13,7 @@ def test_pypi_metadata(name):
     analyzer = pypi_Analyzer()
     has_issues, messages = analyzer.detect(metadata)
     if has_issues is True:
+        print("Metadata test for %s:" %name)
         print(messages)
     return has_issues
 
@@ -29,9 +30,8 @@ def main():
 
     # iterate over the random indices and append the corresponding lines to the list
     for index in random_indices:
-        name = lines[index]
+        name = lines[index].strip()
         sample_packages.append(name)
-        print("Metadata test for %s:\n", name)
         test_pypi_metadata(name)
 
     # print the selected strings list

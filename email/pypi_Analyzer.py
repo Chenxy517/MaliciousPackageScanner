@@ -41,4 +41,3 @@ class pypi_Analyzer(Analyzer):
                 upload_time_text = version_release[0]["upload_time_iso_8601"]
                 release_date = parser.isoparse(upload_time_text).replace(tzinfo=None)
                 return release_date
-        raise Exception("could not find release date")

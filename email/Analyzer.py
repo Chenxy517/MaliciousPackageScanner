@@ -60,14 +60,16 @@ class Analyzer:
 
         emails = self.get_email_addresses(package_info)
 
-        if len(emails) == 0:
-            # No e-mail is set for this package, hence no risk
-            return False, "No e-mail found for this package"
-
         latest_project_release = self.get_project_latest_release_date(package_info)
 
         has_issues = False
         messages = []
+        if len(emails) == 0:
+            # No email is set for this package
+            has_issues = True
+            messages.append(f"No email found for this package")
+            return has_issues, "\n".join(messages)
+
         for email in emails:
             sanitized_email = email.strip().replace(">", "").replace("<", "")
             email_domain = sanitized_email.split("@")[-1]
@@ -78,7 +80,10 @@ class Analyzer:
                 messages.append(f"The maintainer's email ({email}) domain does not exist and can likely be registered "
                                 f"by an attacker to compromise the maintainer's {self.ecosystem} account")
             if domain_creation_date is None or latest_project_release is None:
+                has_issues = True
+                messages.append(f"Domain({email}) creation date or release date not found")
                 continue
+
             if latest_project_release < domain_creation_date:
                 has_issues = True
                 messages.append(f"The domain name of the maintainer's email address ({email}) was"" re-registered after"
@@ -100,7 +105,7 @@ class Analyzer:
             if response.status_code == 200:
                 # The email address has been compromised, print the details of the data breaches
                 has_issues = True
-                messages.append(f"Your email address has been compromised in the following data breaches:")
+                messages.append(f"Your email address({email}) has been compromised in the following data breaches:")
                 for breach in response.json():
                     messages.append(breach["Name"])
             else:

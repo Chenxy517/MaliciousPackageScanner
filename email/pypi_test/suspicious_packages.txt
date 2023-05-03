@@ -1,0 +1,135 @@
+Metadata test for terraformlintingcli:
+Your email address has been compromised in the following data breaches:
+PDL
+LinkedInScrape
+
+Metadata test for onechat:
+Domain(punnawish.th@inet.co.th) creation date or release date not found
+
+Metadata test for pystopwatch2:
+Domain() creation date or release date not found
+
+Metadata test for django-whatsnew:
+Your email address has been compromised in the following data breaches:
+PDL
+LinkedInScrape
+
+Metadata test for pid-pendulum:
+Domain(p.schuette@online.de) creation date or release date not found
+
+
+Metadata test for pitchmark:
+Domain() creation date or release date not found
+
+Metadata test for femmt:
+Domain(upblea@mail.upb.de) creation date or release date not found
+
+Metadata test for dxf-fix:
+Your email address has been compromised in the following data breaches:
+db8151dd
+PDL
+Evite
+GeekedIn
+Gravatar
+LinkedIn
+LinkedInScrape
+OnlinerSpambot
+Thingiverse
+VerificationsIO
+YouveBeenScraped
+
+Metadata test for tdm-imdb-get-rating:
+Domain(Bradley Chang <chang713@purdue.edu>) creation date or release date not found
+
+Metadata test for copypathtoclipboard:
+Your email address has been compromised in the following data breaches:
+Cit0day
+LuminPDF
+Metadata test for kiteconnect-cli:
+No issue found for the email.
+
+Metadata test for auth-lib-profcomff:
+Domain() creation date or release date not found
+
+Metadata test for dash-flow-example:
+Domain() creation date or release date not found
+
+Metadata test for distributions-parvaresh:
+Domain() creation date or release date not found
+
+Metadata test for poe-web-client:
+Domain() creation date or release date not found
+
+Metadata test for simpleactors:
+Your email address has been compromised in the following data breaches:
+Aptoide
+ClearVoiceSurveys
+Collection1
+Deezer
+Disqus
+Dropbox
+Epik
+Gravatar
+Lastfm
+LeadHunter
+NotAcxiom
+Thingiverse
+
+Metadata test for inspiretools:
+Domain() creation date or release date not found
+
+Metadata test for bilayer-letb:
+Domain(shiveshapathak@gmail.com, lkwagner@illinois.edu) creation date or release date not found
+
+Metadata test for wf-cv-utils:
+Your email address has been compromised in the following data breaches:
+Apollo
+
+Metadata test for climetlab-maelstrom-nogwd:
+Domain(matthew.chantry@ecmwf.int) creation date or release date not found
+
+Metadata test for kupp:
+Domain(mehdi.ali@cs.uni-bonn.de) creation date or release date not found
+
+Metadata test for market-game:
+Domain(wwyatt@ucsc.edu) creation date or release date not found
+
+Metadata test for cricket-cookie:
+Domain(grid-eng@grid.ai) creation date or release date not found
+
+Metadata test for tabletools:
+Domain(emmanouil.maragkakis@nih.gov) creation date or release date not found
+
+Metadata test for biribiri-rpc-client:
+Your email address(ilya.muromec@gmail.com) has been compromised in the following data breaches:
+Bookmate
+BTCE
+Collection1
+PDL
+Disqus
+ExploitIn
+GeekedIn
+Gravatar
+Lastfm
+LinkedIn
+LinkedInScrape
+LiveJournal
+OnlinerSpambot
+Pemiblanc
+Twitter200M
+VK
+YouveBeenScraped
+
+Metadata test for amorf:
+Domain(david.hildner@student.uni-tuebingen.de) creation date or release date not found
+
+Metadata test for aquantoolbox:
+Your email address(info@auquan.com) has been compromised in the following data breaches:
+Gravatar
+IIMJobs
+
+Metadata test for nextstrain-augur:
+Domain(trevor@bedford.io, richard.neher@unibas.ch) creation date or release date not found
+
+Metadata test for bob-paper-tifs2018-dsu:
+Domain(tiago.pereira@idiap.ch) creation date or release date not found
