@@ -29,7 +29,10 @@ def main():
 
     # iterate over the random indices and append the corresponding lines to the list
     for index in random_indices:
-        sample_packages.append(lines[index])
+        name = lines[index]
+        sample_packages.append(name)
+        print("Metadata test for %s:\n", name)
+        test_pypi_metadata(name)
 
     # print the selected strings list
     print(sample_packages)
