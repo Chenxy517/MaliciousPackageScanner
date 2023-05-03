@@ -1,7 +1,7 @@
 import os
 import re
 import yaml
-from typing import Optional, Self
+from typing import Optional
 
 
 class Analyzer:
