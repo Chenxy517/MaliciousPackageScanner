@@ -5,7 +5,6 @@ import yaml
 import requests
 import whois
 import argparse
-import logging
 import tarsafe 
 import requests
 import pathlib
@@ -19,9 +18,6 @@ from packaging import version
 from pathlib import Path
 from typing import Optional, Tuple
 from typing import List
-log = logging.getLogger("guarddog")
-
-
 from whois.parser import PywhoisError
 
 """
@@ -340,7 +336,6 @@ def safe_extract(source_archive: str, target_directory: str) -> None:
     @param target_directory:    The directory where to extract the archive to
     @raise ValueError           If the archive type is unsupported
     """
-    log.debug(f"Extracting archive {source_archive} to directory {target_directory}")
     if source_archive.endswith('.tar.gz') or source_archive.endswith('.tgz'):
         tarsafe.open(source_archive).extractall(target_directory)
     elif source_archive.endswith('.zip') or source_archive.endswith('.whl'):
@@ -360,7 +355,6 @@ def download_compressed(url, archive_path, target_path):
             target_path (str): path to unzip compressed file
         """
 
-        log.debug(f"Downloading package archive from {url} into {target_path}")
         response = requests.get(url, stream=True)
 
         with open(archive_path, "wb") as f:
@@ -368,9 +362,7 @@ def download_compressed(url, archive_path, target_path):
 
         try:
             safe_extract(archive_path, target_path)
-            log.debug(f"Successfully extracted files to {target_path}")
         finally:
-            log.debug(f"Removing temporary archive file {archive_path}")
             os.remove(archive_path)
             
 def download_package(package_name, directory, version=None) -> str:
@@ -435,7 +427,6 @@ def download_and_get_package_info(directory: str, package_name: str, version=Non
             raise Exception("Git targets are not yet supported for npm")
 
         url = f"https://registry.npmjs.org/{package_name}"
-        log.debug(f"Downloading NPM package from {url}")
         response = requests.get(url)
 
         if response.status_code != 200:
@@ -474,7 +465,6 @@ def get_package_info(name: str) -> dict:
     """
 
     url = "https://pypi.org/pypi/%s/json" % (name,)
-    log.debug(f"Retrieving PyPI package metadata from {url}")
     response = requests.get(url)
 
     # Check if package file exists

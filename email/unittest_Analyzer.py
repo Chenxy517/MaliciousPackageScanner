@@ -11,7 +11,7 @@ from _pytest.monkeypatch import MonkeyPatch
 from npm_Analyzer import npm_Analyzer
 from pypi_Analyzer import pypi_Analyzer
 
-from sample_project_info import PYPI_PACKAGE_INFO
+import resources.sample_project_info as PYPI_PACKAGE_INFO
 
 with open("npm_data.json", "r") as file:
     NPM_PACKAGE_INFO = json.load(file)
