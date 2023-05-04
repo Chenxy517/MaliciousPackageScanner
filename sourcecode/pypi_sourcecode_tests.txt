@@ -1,0 +1,1194 @@
+giotto-deep
+No issues detected in source code.
+dogsvscats
+No issues detected in source code.
+eventstoredb
+No issues detected in source code.
+dl-frame
+No issues detected in source code.
+lesspy
+No issues detected in source code.
+tmalibrary
+No issues detected in source code.
+password-learner
+No issues detected in source code.
+testlog
+No issues detected in source code.
+snowjob
+No issues detected in source code.
+aifactory-alpha
+No issues detected in source code.
+wazender
+No issues detected in source code.
+correlacao
+No issues detected in source code.
+pyreadability
+No issues detected in source code.
+aplay
+No issues detected in source code.
+bable-interface
+Potential malware detected:
+The file test_packet.py matches the Check for XOR-encoded strings rule: Checks if the file contains XOR-encoded strings, which may indicate code obfuscation.
+
+The file test_utils.py matches the Check for XOR-encoded strings rule: Checks if the file contains XOR-encoded strings, which may indicate code obfuscation.
+
+static-hy
+No issues detected in source code.
+findsame
+No issues detected in source code.
+pysugar
+No issues detected in source code.
+extractpdf
+No issues detected in source code.
+vio2
+No issues detected in source code.
+wix-protos-proto-bi-feature-catalog-api
+No issues detected in source code.
+uttt-irc
+No issues detected in source code.
+lb-controller
+No issues detected in source code.
+big-o
+No issues detected in source code.
+cqhttp
+No issues detected in source code.
+rclonepy
+No issues detected in source code.
+pleaseshare
+No issues detected in source code.
+sagongmin
+No issues detected in source code.
+cll
+No issues detected in source code.
+tf-encrypted-primitives
+No issues detected in source code.
+mwklient
+No issues detected in source code.
+gpm-playlist-generator
+No issues detected in source code.
+rapid-framework
+Potential malware detected:
+The file main.py matches the Use of requests to download binary rule: Detects the use of the requests module to download a remote binary file
+
+text-models
+No issues detected in source code.
+scinet-joshgoa
+No issues detected in source code.
+An error occurred: [Errno 2] No such file or directory: 'download\\odoo13-addon-event-registration-partner-unique\\odoo\\addons\\event_registration_partner_unique\\i18n\\event_registration_partner_unique.pot\\odoo\\addons\\event_registration_partner_unique\\i18n\\event_registration_partner_unique.pot'
+odoo13-addon-event-registration-partner-unique
+No issues detected in source code.
+ceresdb-client
+No issues detected in source code.
+fastapi-helpers
+No issues detected in source code.
+spglib
+No issues detected in source code.
+django-sympycharfield
+No issues detected in source code.
+querystatelib
+No issues detected in source code.
+rlg
+No issues detected in source code.
+noice
+No issues detected in source code.
+devpi-constrained
+No issues detected in source code.
+An error occurred: Compressed file for pythonwebquery does not exist on PyPI.
+pythonwebquery
+No issues detected in source code.
+murdfpy
+No issues detected in source code.
+An error occurred: Received status code: 404 from PyPI
+pyprom-pom
+No issues detected in source code.
+spacy-language-detection
+No issues detected in source code.
+andperf
+No issues detected in source code.
+ups-turkey
+No issues detected in source code.
+pretix-plugin-extended-api
+No issues detected in source code.
+easyjsondb
+No issues detected in source code.
+aws-lambda-python-packager
+No issues detected in source code.
+visualimiss
+No issues detected in source code.
+uliweb-apijson
+No issues detected in source code.
+gitstorage
+No issues detected in source code.
+rmrl
+No issues detected in source code.
+tensorpack
+No issues detected in source code.
+sudokusolverpy
+No issues detected in source code.
+openbanking
+No issues detected in source code.
+cs46-trees-structures
+No issues detected in source code.
+django-frontapp
+No issues detected in source code.
+spacy-to-naf
+No issues detected in source code.
+nbdev-apl
+No issues detected in source code.
+quicky-repo
+No issues detected in source code.
+odoo-addon-edi-stock-oca
+No issues detected in source code.
+importtools
+No issues detected in source code.
+qr-io
+No issues detected in source code.
+slamon-agent
+No issues detected in source code.
+django-datatable-view
+No issues detected in source code.
+auto-gitignore
+Potential malware detected:
+The file gitignore.py matches the Use of requests to download binary rule: Detects the use of the requests module to download a remote binary file
+
+An error occurred: Received status code: 404 from PyPI
+quran-module
+No issues detected in source code.
+pypkgs-km
+No issues detected in source code.
+mixer-pyaudio
+No issues detected in source code.
+odoo14-addon-stock-auto-move
+No issues detected in source code.
+appveyor-artifacts
+No issues detected in source code.
+contextus
+No issues detected in source code.
+toga-dotnet
+No issues detected in source code.
+alibabacloud-arms20190808
+No issues detected in source code.
+zsh-compose
+No issues detected in source code.
+e9-ptz
+No issues detected in source code.
+datadriver
+No issues detected in source code.
+tunm-proto
+No issues detected in source code.
+detapack
+No issues detected in source code.
+ignore-from-github
+No issues detected in source code.
+runtogether
+No issues detected in source code.
+c2c-template
+No issues detected in source code.
+pyredditchatbot
+No issues detected in source code.
+passwd-encrypt
+No issues detected in source code.
+building-inspection-toolkit
+No issues detected in source code.
+superset-erikxt
+No issues detected in source code.
+file-hash
+No issues detected in source code.
+An error occurred: Received status code: 404 from PyPI
+maximum-heap
+No issues detected in source code.
+pflow-metamodel
+No issues detected in source code.
+ptterm
+No issues detected in source code.
+ejtraderiq
+No issues detected in source code.
+gfe
+No issues detected in source code.
+sweatygoals
+No issues detected in source code.
+pytl
+No issues detected in source code.
+micropython-mqttse
+No issues detected in source code.
+simpleor
+Potential malware detected:
+The file test_simpleor.py matches the Use of requests to download binary rule: Detects the use of the requests module to download a remote binary file
+
+odoo12-addon-fieldservice-fleet
+No issues detected in source code.
+pyfakefs
+Potential malware detected:
+The file fake_filesystem_shutil_test.py matches the Make remote binary executable rule: Detects the use of chmod or os.chmod to make a remote binary executable
+
+The file fake_open_test.py matches the Check for XOR-encoded strings rule: Checks if the file contains XOR-encoded strings, which may indicate code obfuscation.
+
+The file fake_os_test.py matches the Make remote binary executable rule: Detects the use of chmod or os.chmod to make a remote binary executable
+
+The file test_utils.py matches the Make remote binary executable rule: Detects the use of chmod or os.chmod to make a remote binary executable
+
+testcode
+No issues detected in source code.
+sqlite-jsonschema
+No issues detected in source code.
+pymor-nb2plots
+No issues detected in source code.
+tcb-binance
+No issues detected in source code.
+lazyarray
+No issues detected in source code.
+chess-embedding
+No issues detected in source code.
+An error occurred: Compressed file for domcontrol-agent does not exist on PyPI.
+domcontrol-agent
+No issues detected in source code.
+zipline-poloniex
+No issues detected in source code.
+segmentify
+No issues detected in source code.
+frontmatter-to-csv
+No issues detected in source code.
+eventpy
+No issues detected in source code.
+blackhc-implicit-lambda
+No issues detected in source code.
+aiolimit
+No issues detected in source code.
+researchgate-driver
+No issues detected in source code.
+yapic-io
+No issues detected in source code.
+chessvalidator
+No issues detected in source code.
+cdktf-cdktf-provider-postgresql
+No issues detected in source code.
+common-data
+Potential malware detected:
+The file commondata_pb2.py matches the Check for XOR-encoded strings rule: Checks if the file contains XOR-encoded strings, which may indicate code obfuscation.
+
+bigbrother
+No issues detected in source code.
+dropboxdol
+No issues detected in source code.
+mess-server-t
+No issues detected in source code.
+wtforms-test
+No issues detected in source code.
+hzfile
+No issues detected in source code.
+salesforce-python
+No issues detected in source code.
+sol3rd
+Potential malware detected:
+The file sol3rd.py matches the Use of requests to download binary rule: Detects the use of the requests module to download a remote binary file
+
+dupln
+No issues detected in source code.
+glacier-backup-sync
+No issues detected in source code.
+echokit
+No issues detected in source code.
+data-migration
+No issues detected in source code.
+jubakit
+No issues detected in source code.
+yafowil-widget-dict
+No issues detected in source code.
+django-referral
+No issues detected in source code.
+quang-dinh-example-package
+No issues detected in source code.
+kcl
+No issues detected in source code.
+gnomock-python-sdk
+No issues detected in source code.
+pushysdk
+No issues detected in source code.
+varlet
+No issues detected in source code.
+tgbot-snippet
+No issues detected in source code.
+the-larsson
+No issues detected in source code.
+nflscrapy
+No issues detected in source code.
+oe-lite
+No issues detected in source code.
+csoundengine
+No issues detected in source code.
+metano
+No issues detected in source code.
+An error occurred: Received status code: 404 from PyPI
+pydb-community
+No issues detected in source code.
+astar-python
+No issues detected in source code.
+simplepup
+No issues detected in source code.
+cryptoyaml
+No issues detected in source code.
+qw
+No issues detected in source code.
+my-app-server
+No issues detected in source code.
+subtitle-translator
+No issues detected in source code.
+dj-dashboard
+No issues detected in source code.
+pytest-goldie
+Potential malware detected:
+The file test_goldens.py matches the Check for XOR-encoded strings rule: Checks if the file contains XOR-encoded strings, which may indicate code obfuscation.
+
+netpwn
+No issues detected in source code.
+einstein
+No issues detected in source code.
+yc-snapshot-client
+No issues detected in source code.
+hivae
+No issues detected in source code.
+nester-he12321456
+No issues detected in source code.
+remote-microscope
+Potential malware detected:
+The file configuration.py matches the Use of os.popen rule: Detects the use of the os.popen function, which may be used to execute shell commands silently
+
+The file state.py matches the Use of os.popen rule: Detects the use of the os.popen function, which may be used to execute shell commands silently
+
+plotbin
+No issues detected in source code.
+exectiming
+No issues detected in source code.
+oosapy
+No issues detected in source code.
+ahlev-django-brand
+No issues detected in source code.
+products-dcworkflow
+No issues detected in source code.
+papai-public
+No issues detected in source code.
+pathwayenrichment
+No issues detected in source code.
+toxine
+Potential malware detected:
+The file text_preprocessor.py matches the Check for XOR-encoded strings rule: Checks if the file contains XOR-encoded strings, which may indicate code obfuscation.
+
+radar-chart
+No issues detected in source code.
+veloxchem
+No issues detected in source code.
+rdftools
+No issues detected in source code.
+icebreaker
+No issues detected in source code.
+concurrentevents
+No issues detected in source code.
+automateboringstuff5thedition
+No issues detected in source code.
+newtools
+No issues detected in source code.
+hestia-api
+No issues detected in source code.
+gron
+No issues detected in source code.
+jccli
+No issues detected in source code.
+odoo8-addon-l10n-pt-vat
+No issues detected in source code.
+plumbus
+No issues detected in source code.
+django-cms-facetsearch
+No issues detected in source code.
+django-agenda
+No issues detected in source code.
+wtfis
+No issues detected in source code.
+cubes
+No issues detected in source code.
+dob-prompt
+No issues detected in source code.
+solidctf
+No issues detected in source code.
+torchpippy
+No issues detected in source code.
+dotsi
+No issues detected in source code.
+timeline-django
+No issues detected in source code.
+conan-tool
+No issues detected in source code.
+specutils
+No issues detected in source code.
+napari-ui-tracer
+No issues detected in source code.
+akvo
+No issues detected in source code.
+An error occurred: Received status code: 404 from PyPI
+znl-tools
+No issues detected in source code.
+nvidia-cuda-opencl-cu12
+No issues detected in source code.
+aliyun-python-sdk-zhuque
+No issues detected in source code.
+burstable
+Potential malware detected:
+The file burst-monitor matches the Use of requests to download binary rule: Detects the use of the requests module to download a remote binary file
+
+youtube-mp3
+No issues detected in source code.
+grept
+No issues detected in source code.
+An error occurred: Compressed file for vast does not exist on PyPI.
+vast
+No issues detected in source code.
+django-rest-jwt-sso
+No issues detected in source code.
+relsad
+No issues detected in source code.
+pyqt-foldable-item-list-widget
+No issues detected in source code.
+regx-riccard
+No issues detected in source code.
+abyss-sdk
+No issues detected in source code.
+jupyterhub-ec2spawner
+No issues detected in source code.
+avcaesar-api
+No issues detected in source code.
+gmzqiqi
+No issues detected in source code.
+scslabs2
+Potential malware detected:
+The file serializer.py matches the Check for XOR-encoded strings rule: Checks if the file contains XOR-encoded strings, which may indicate code obfuscation.
+
+The file pkgconfig.py matches the Use of subprocess with PIPE rule: Detects the use of the subprocess module with PIPE, which may be used to execute shell commands silently by suppressing output
+
+The file constant.py matches the Check for XOR-encoded strings rule: Checks if the file contains XOR-encoded strings, which may indicate code obfuscation.
+
+The file backend.py matches the Check for XOR-encoded strings rule: Checks if the file contains XOR-encoded strings, which may indicate code obfuscation.
+
+The file keywrap.py matches the Check for XOR-encoded strings rule: Checks if the file contains XOR-encoded strings, which may indicate code obfuscation.
+
+The file punctuation_chars.py matches the Check for XOR-encoded strings rule: Checks if the file contains XOR-encoded strings, which may indicate code obfuscation.
+
+The file test_low_level.py matches the Check for XOR-encoded strings rule: Checks if the file contains XOR-encoded strings, which may indicate code obfuscation.
+
+The file cli.py matches the Browser password theft rule: Detects the use of known modules to steal saved passwords from browsers
+
+The file devpi_client.py matches the Browser password theft rule: Detects the use of known modules to steal saved passwords from browsers
+
+The file auth.py matches the Browser password theft rule: Detects the use of known modules to steal saved passwords from browsers
+
+The file unistring.py matches the Check for XOR-encoded strings rule: Checks if the file contains XOR-encoded strings, which may indicate code obfuscation.
+
+The file jvm.py matches the Check for XOR-encoded strings rule: Checks if the file contains XOR-encoded strings, which may indicate code obfuscation.
+
+The file __init__.py matches the Use of requests to download binary rule: Detects the use of the requests module to download a remote binary file
+
+The file handler.py matches the Use of requests to download binary rule: Detects the use of the requests module to download a remote binary file
+
+The file encoder.py matches the Use of requests to download binary rule: Detects the use of the requests module to download a remote binary file
+
+The file dump.py matches the Use of requests to download binary rule: Detects the use of the requests module to download a remote binary file
+
+The file auth.py matches the Browser password theft rule: Detects the use of known modules to steal saved passwords from browsers
+
+The file tests.py matches the Check for XOR-encoded strings rule: Checks if the file contains XOR-encoded strings, which may indicate code obfuscation.
+
+The file serializer.py matches the Check for XOR-encoded strings rule: Checks if the file contains XOR-encoded strings, which may indicate code obfuscation.
+
+The file pkgconfig.py matches the Use of subprocess with PIPE rule: Detects the use of the subprocess module with PIPE, which may be used to execute shell commands silently by suppressing output
+
+The file constant.py matches the Check for XOR-encoded strings rule: Checks if the file contains XOR-encoded strings, which may indicate code obfuscation.
+
+The file backend.py matches the Check for XOR-encoded strings rule: Checks if the file contains XOR-encoded strings, which may indicate code obfuscation.
+
+The file keywrap.py matches the Check for XOR-encoded strings rule: Checks if the file contains XOR-encoded strings, which may indicate code obfuscation.
+
+The file punctuation_chars.py matches the Check for XOR-encoded strings rule: Checks if the file contains XOR-encoded strings, which may indicate code obfuscation.
+
+The file test_low_level.py matches the Check for XOR-encoded strings rule: Checks if the file contains XOR-encoded strings, which may indicate code obfuscation.
+
+The file cli.py matches the Browser password theft rule: Detects the use of known modules to steal saved passwords from browsers
+
+The file devpi_client.py matches the Browser password theft rule: Detects the use of known modules to steal saved passwords from browsers
+
+The file auth.py matches the Browser password theft rule: Detects the use of known modules to steal saved passwords from browsers
+
+The file unistring.py matches the Check for XOR-encoded strings rule: Checks if the file contains XOR-encoded strings, which may indicate code obfuscation.
+
+The file jvm.py matches the Check for XOR-encoded strings rule: Checks if the file contains XOR-encoded strings, which may indicate code obfuscation.
+
+The file __init__.py matches the Use of requests to download binary rule: Detects the use of the requests module to download a remote binary file
+
+The file handler.py matches the Use of requests to download binary rule: Detects the use of the requests module to download a remote binary file
+
+The file encoder.py matches the Use of requests to download binary rule: Detects the use of the requests module to download a remote binary file
+
+The file dump.py matches the Use of requests to download binary rule: Detects the use of the requests module to download a remote binary file
+
+The file auth.py matches the Browser password theft rule: Detects the use of known modules to steal saved passwords from browsers
+
+The file tests.py matches the Check for XOR-encoded strings rule: Checks if the file contains XOR-encoded strings, which may indicate code obfuscation.
+
+finoptions
+No issues detected in source code.
+golosscripts
+No issues detected in source code.
+fl-flask-zipkin
+Potential malware detected:
+The file flask_zipkin.py matches the Check for XOR-encoded strings rule: Checks if the file contains XOR-encoded strings, which may indicate code obfuscation.
+
+path
+Potential malware detected:
+The file test_path.py matches the Check for XOR-encoded strings rule: Checks if the file contains XOR-encoded strings, which may indicate code obfuscation.
+
+dictschema
+No issues detected in source code.
+uniphy
+No issues detected in source code.
+chopra
+No issues detected in source code.
+forklib
+No issues detected in source code.
+flask-ldap-view
+No issues detected in source code.
+pytest-embedded-arduino
+No issues detected in source code.
+pip2conda
+Potential malware detected:
+The file pip2conda.py matches the Use of requests to download binary rule: Detects the use of the requests module to download a remote binary file
+
+uprefix
+No issues detected in source code.
+django-fernet-fields
+No issues detected in source code.
+tundra-xaxlib-python
+No issues detected in source code.
+ppdyn
+No issues detected in source code.
+pysimultan
+No issues detected in source code.
+An error occurred: Received status code: 404 from PyPI
+pandas-operations
+No issues detected in source code.
+etatimer
+No issues detected in source code.
+openerp-web-gantt
+No issues detected in source code.
+mknxgn-openscale
+No issues detected in source code.
+madi2
+No issues detected in source code.
+scss
+No issues detected in source code.
+monocle-modals
+No issues detected in source code.
+jagokata
+Potential malware detected:
+The file katabijak.py matches the Use of requests to download binary rule: Detects the use of the requests module to download a remote binary file
+
+The file peribahasa.py matches the Use of requests to download binary rule: Detects the use of the requests module to download a remote binary file
+
+yquant
+No issues detected in source code.
+codeprocessor-reader
+No issues detected in source code.
+sqlit
+No issues detected in source code.
+shady-tr
+No issues detected in source code.
+django-rest-client
+No issues detected in source code.
+sentryconfig
+No issues detected in source code.
+dtool-lookup-server-dependency-graph-plugin
+No issues detected in source code.
+sentry-relay
+No issues detected in source code.
+pyrocopy
+No issues detected in source code.
+jiraextendedlib
+No issues detected in source code.
+An error occurred: Received status code: 404 from PyPI
+django-curriculumvitae
+No issues detected in source code.
+jst
+No issues detected in source code.
+lutar
+No issues detected in source code.
+rest-accounts
+No issues detected in source code.
+sarcastic-color-scheme
+No issues detected in source code.
+jootranslate
+No issues detected in source code.
+py-zillow
+No issues detected in source code.
+django-eth-fields
+No issues detected in source code.
+animdl
+Potential malware detected:
+The file __init__.py matches the Check for XOR-encoded strings rule: Checks if the file contains XOR-encoded strings, which may indicate code obfuscation.
+
+cov-core
+No issues detected in source code.
+cachein
+No issues detected in source code.
+market-data-transcoder
+No issues detected in source code.
+An error occurred: Compressed file for radical does not exist on PyPI.
+radical
+No issues detected in source code.
+xiaochuanhttpsproxy
+No issues detected in source code.
+flask-weasyprint
+No issues detected in source code.
+wizards
+No issues detected in source code.
+meta-ae
+No issues detected in source code.
+py-triton
+No issues detected in source code.
+md-resume
+No issues detected in source code.
+scrapelab
+No issues detected in source code.
+angryduckchool
+No issues detected in source code.
+many
+No issues detected in source code.
+alibabacloud-imp-room20210515-py2
+No issues detected in source code.
+psvg
+No issues detected in source code.
+An error occurred: Received status code: 404 from PyPI
+allrights
+No issues detected in source code.
+kats
+No issues detected in source code.
+testpypimp
+No issues detected in source code.
+pvshepherd
+Potential malware detected:
+The file libQt5DBus.so.5 matches the Keylogger pattern rule: Detects some keylogging patterns in Python code
+
+The file Qt5DBus.dll matches the Keylogger pattern rule: Detects some keylogging patterns in Python code
+
+whatismymovie
+No issues detected in source code.
+graphextract
+No issues detected in source code.
+monoalpha
+No issues detected in source code.
+ultrello
+No issues detected in source code.
+cdk-simplewebsite-deploy
+No issues detected in source code.
+thrall
+No issues detected in source code.
+nester-myp
+No issues detected in source code.
+django-sysinfo
+No issues detected in source code.
+mitts
+No issues detected in source code.
+pauseonlock
+No issues detected in source code.
+httplint
+No issues detected in source code.
+mixture-models
+No issues detected in source code.
+akamaikickstart
+No issues detected in source code.
+pycopy-uasyncio-core
+No issues detected in source code.
+print-nester-list
+No issues detected in source code.
+big-o-dmunguiatec
+No issues detected in source code.
+voeventdb-remote
+No issues detected in source code.
+ufma-scrapperpy
+No issues detected in source code.
+springleaf
+No issues detected in source code.
+shippai
+No issues detected in source code.
+emrecharge
+No issues detected in source code.
+fw-meta
+No issues detected in source code.
+fortran-rt
+No issues detected in source code.
+lisa-cnn-explainerv4
+No issues detected in source code.
+pwm-scan
+No issues detected in source code.
+fjord-kafka-migration
+No issues detected in source code.
+sqlar
+No issues detected in source code.
+ip-reveal
+No issues detected in source code.
+sniparinject
+Potential malware detected:
+The file PKG-INFO matches the Check for XOR-encoded strings rule: Checks if the file contains XOR-encoded strings, which may indicate code obfuscation.
+
+The file PKG-INFO matches the Check for XOR-encoded strings rule: Checks if the file contains XOR-encoded strings, which may indicate code obfuscation.
+
+An error occurred: Received status code: 404 from PyPI
+multisilicon
+No issues detected in source code.
+evalipy
+No issues detected in source code.
+feing-core
+No issues detected in source code.
+hetzner-fix-report
+Potential malware detected:
+The file conf.py matches the Use of os.popen rule: Detects the use of the os.popen function, which may be used to execute shell commands silently
+
+pyalsaaudio
+No issues detected in source code.
+strif
+No issues detected in source code.
+fiftyone-pipeline-engines-fiftyone
+No issues detected in source code.
+machinepdf
+No issues detected in source code.
+dedupe-variable-name
+No issues detected in source code.
+zeusai-py
+No issues detected in source code.
+tshistory-client
+No issues detected in source code.
+abineshpdf
+No issues detected in source code.
+infynipy
+No issues detected in source code.
+pyastrosalt
+No issues detected in source code.
+densenet-pytorch
+No issues detected in source code.
+client-chat-pyqt-gizy
+No issues detected in source code.
+An error occurred: Received status code: 404 from PyPI
+gym-zxj-wheelpen
+No issues detected in source code.
+coscon
+No issues detected in source code.
+kimai-python
+No issues detected in source code.
+a-parser
+No issues detected in source code.
+extra-cereb-nest
+No issues detected in source code.
+swing-server
+No issues detected in source code.
+snips-respeaker
+No issues detected in source code.
+django-jsonfield2
+No issues detected in source code.
+chevy
+No issues detected in source code.
+relint
+No issues detected in source code.
+dectate
+No issues detected in source code.
+mimes
+No issues detected in source code.
+datasette-base64
+No issues detected in source code.
+wheatly
+No issues detected in source code.
+rfour
+No issues detected in source code.
+pyubqhash
+No issues detected in source code.
+fattoush
+No issues detected in source code.
+An error occurred: Compressed file for django-taggit-autocomplete does not exist on PyPI.
+django-taggit-autocomplete
+No issues detected in source code.
+webid-delegated-auth
+No issues detected in source code.
+odoo13-addon-partner-second-lastname
+No issues detected in source code.
+An error occurred: Compressed file for saltlick does not exist on PyPI.
+saltlick
+No issues detected in source code.
+heyfour
+No issues detected in source code.
+egen111222-my-docs-libs
+No issues detected in source code.
+rebiber
+No issues detected in source code.
+indian-stock-markets
+No issues detected in source code.
+odoo14-addon-pricelist-cache-rest
+No issues detected in source code.
+botocore-a-la-carte-iot1click-devices
+No issues detected in source code.
+pytest-runtime-types
+No issues detected in source code.
+bimpy
+Potential malware detected:
+The file imgui_demo.cpp matches the Check for XOR-encoded strings rule: Checks if the file contains XOR-encoded strings, which may indicate code obfuscation.
+
+The file imgui_impl_sdl.cpp matches the Access to clipboard data rule: Detects access to clipboard data, which may indicate attempts to steal sensitive information
+
+wingdbg
+No issues detected in source code.
+suspicious
+No issues detected in source code.
+schema-compare
+No issues detected in source code.
+agent-6tisch
+No issues detected in source code.
+symmat
+No issues detected in source code.
+odoo13-addon-hr-payroll
+No issues detected in source code.
+attest
+No issues detected in source code.
+restfx
+No issues detected in source code.
+gist-id
+No issues detected in source code.
+ssm-acquire
+No issues detected in source code.
+sqlalchemy-opentracing
+No issues detected in source code.
+An error occurred: Compressed file for pydisplay does not exist on PyPI.
+pydisplay
+No issues detected in source code.
+pcodedmp
+No issues detected in source code.
+idfx
+No issues detected in source code.
+ddddddd
+No issues detected in source code.
+restuml2code
+No issues detected in source code.
+dj-labeler
+No issues detected in source code.
+unknowndb
+No issues detected in source code.
+core-module-status-registry-app
+No issues detected in source code.
+qfin
+No issues detected in source code.
+py-lorem
+No issues detected in source code.
+geospock-cli
+Potential malware detected:
+The file config_reader.py matches the Browser password theft rule: Detects the use of known modules to steal saved passwords from browsers
+
+poormanschema
+No issues detected in source code.
+albion-data
+Potential malware detected:
+The file api.py matches the Use of requests to download binary rule: Detects the use of the requests module to download a remote binary file
+
+pulumi-kubernetes-coredns
+No issues detected in source code.
+rtspwebviewer
+No issues detected in source code.
+sensu-auditor
+No issues detected in source code.
+odoo14-addon-partner-contact-access-link
+No issues detected in source code.
+miongo
+No issues detected in source code.
+azure-iot-device
+No issues detected in source code.
+sphinx-corlab-theme
+No issues detected in source code.
+django-google-tag-manager
+No issues detected in source code.
+pylogical
+No issues detected in source code.
+certbot-dns-netcup
+No issues detected in source code.
+jfaleiro-tsstore
+No issues detected in source code.
+An error occurred: [Errno 2] No such file or directory: 'download\\valer-queue\\valer.queue-1.0.3rc11\\src\\senaite\\queue\\browser\\viewlets\\templates\\queued_analyses_sample_viewlet.pt\\valer.queue-1.0.3rc11\\src\\senaite\\queue\\browser\\viewlets\\templates\\queued_analyses_sample_viewlet.pt'
+valer-queue
+No issues detected in source code.
+allianceauth
+Potential malware detected:
+The file test_testing.py matches the Use of requests to download binary rule: Detects the use of the requests module to download a remote binary file
+
+ttldict2
+No issues detected in source code.
+darwin-env-selector
+No issues detected in source code.
+source-clockify
+No issues detected in source code.
+cookiepatcher
+No issues detected in source code.
+An error occurred: Received status code: 404 from PyPI
+jupyter-argparser
+No issues detected in source code.
+xutils
+No issues detected in source code.
+An error occurred: Compressed file for powerbrickide does not exist on PyPI.
+powerbrickide
+No issues detected in source code.
+starct
+No issues detected in source code.
+mosaici
+No issues detected in source code.
+rcpicar
+No issues detected in source code.
+django-lookup-table-rating-widget
+No issues detected in source code.
+cortana
+No issues detected in source code.
+symnet-cp
+No issues detected in source code.
+cgrr
+No issues detected in source code.
+suds-sw
+No issues detected in source code.
+spatula
+No issues detected in source code.
+webim-common
+No issues detected in source code.
+aws-lambda-api-builder
+No issues detected in source code.
+intake-dcat
+No issues detected in source code.
+woodchuck
+No issues detected in source code.
+learnlib
+No issues detected in source code.
+joutil
+Potential malware detected:
+The file ucDatasetUtil.py matches the Use of requests to download binary rule: Detects the use of the requests module to download a remote binary file
+
+ec2-tag-conditional
+No issues detected in source code.
+pycloser
+No issues detected in source code.
+simplegraphs
+No issues detected in source code.
+democritus-csv
+No issues detected in source code.
+biomedsheets
+No issues detected in source code.
+nester-tc
+No issues detected in source code.
+python-strip-whitespace
+No issues detected in source code.
+An error occurred: Received status code: 404 from PyPI
+resh
+No issues detected in source code.
+odoo10-addons-oca-l10n-netherlands
+No issues detected in source code.
+ribspatcher
+No issues detected in source code.
+An error occurred: Received status code: 404 from PyPI
+layermake-lambda-layer-bundling-tool
+No issues detected in source code.
+example-pkg-your-lifefornazgul
+No issues detected in source code.
+retro-pytorch
+No issues detected in source code.
+sphinxcontrib-asciiart
+No issues detected in source code.
+dedust
+No issues detected in source code.
+cyint-regressions
+No issues detected in source code.
+pomodoro-den-ik
+No issues detected in source code.
+django-sniplates
+No issues detected in source code.
+fsleyes-widgets
+No issues detected in source code.
+ewoksppf
+No issues detected in source code.
+brutx4
+No issues detected in source code.
+pycopy-importlib-resources
+No issues detected in source code.
+An error occurred: [Errno 2] No such file or directory: 'download\\odoo10-addon-l10n-it-fiscal-document-type\\odoo10_addon_l10n_it_fiscal_document_type-10.0.2.0.0.dist-info\\namespace_packages.txt\\odoo10_addon_l10n_it_fiscal_document_type-10.0.2.0.0.dist-info\\namespace_packages.txt'
+odoo10-addon-l10n-it-fiscal-document-type
+No issues detected in source code.
+pypore3d
+No issues detected in source code.
+simpledict
+No issues detected in source code.
+django-sliver
+No issues detected in source code.
+sixgill-clients
+No issues detected in source code.
+easycord
+No issues detected in source code.
+mercati-energetici
+No issues detected in source code.
+odoo-addon-iot-oca
+No issues detected in source code.
+wiki-matcher
+No issues detected in source code.
+alibabacloud-objectdet20191230
+No issues detected in source code.
+jzt
+No issues detected in source code.
+poke-jenkins
+No issues detected in source code.
+grafter
+No issues detected in source code.
+romuere
+No issues detected in source code.
+enecostdutils
+No issues detected in source code.
+uncrumpled-async-gui
+No issues detected in source code.
+wix-protos-premium-authorization
+No issues detected in source code.
+richclubv4
+No issues detected in source code.
+optax-adan
+No issues detected in source code.
+An error occurred: Received status code: 404 from PyPI
+olidadjokes
+No issues detected in source code.
+quickplots
+No issues detected in source code.
+secpip
+No issues detected in source code.
+katsdpservices
+No issues detected in source code.
+devpi-findlinks
+No issues detected in source code.
+mrkoll-scraper
+No issues detected in source code.
+token-fuse
+No issues detected in source code.
+sweet-socket
+No issues detected in source code.
+mailround
+No issues detected in source code.
+knight-dialer
+No issues detected in source code.
+antchain-ak-0c95c99b6e784588abc2c6988e53fb61
+No issues detected in source code.
+shark-shop-utils
+No issues detected in source code.
+amplremote
+No issues detected in source code.
+magiconfig
+No issues detected in source code.
+geoapify4us
+No issues detected in source code.
+customvalidator
+No issues detected in source code.
+simple-aes
+No issues detected in source code.
+zono
+No issues detected in source code.
+w-binder-manager
+No issues detected in source code.
+orgstackcli
+No issues detected in source code.
+pyhand-earth
+No issues detected in source code.
+An error occurred: [Errno 2] No such file or directory: 'download\\bob-ip-tensorflow-extractor\\bob.ip.tensorflow_extractor-0.0.7\\bob.ip.tensorflow_extractor.egg-info\\dependency_links.txt\\bob.ip.tensorflow_extractor-0.0.7\\bob.ip.tensorflow_extractor.egg-info\\dependency_links.txt'
+bob-ip-tensorflow-extractor
+No issues detected in source code.
+logicmonitor-sdk
+No issues detected in source code.
+my315ok-portlet-flash
+No issues detected in source code.
+vv
+No issues detected in source code.
+hrl-pybullet-envs
+No issues detected in source code.
+makit-lib
+Potential malware detected:
+The file cmd.py matches the Use of os.popen rule: Detects the use of the os.popen function, which may be used to execute shell commands silently
+
+relion
+No issues detected in source code.
+django-yleisavain
+No issues detected in source code.
+sr-dice
+No issues detected in source code.
+pvmpy
+No issues detected in source code.
+neo4py
+No issues detected in source code.
+idlk
+No issues detected in source code.
+An error occurred: Received status code: 404 from PyPI
+fsakashbotlogin
+No issues detected in source code.
+An error occurred: Received status code: 404 from PyPI
+sai-utils
+No issues detected in source code.
+miva-mmt
+No issues detected in source code.
+blue-dot-sessions-gemscapes
+Potential malware detected:
+The file __init__.py matches the Use of subprocess with PIPE rule: Detects the use of the subprocess module with PIPE, which may be used to execute shell commands silently by suppressing output
+
+makedeb-srcinfo
+No issues detected in source code.
+webcamd
+No issues detected in source code.
+aiozmq-heartbeat
+No issues detected in source code.
+An error occurred: Compressed file for viffbench does not exist on PyPI.
+viffbench
+No issues detected in source code.
+An error occurred: Received status code: 404 from PyPI
+py-data-governance
+No issues detected in source code.
+retrylib
+Potential malware detected:
+The file PKG-INFO matches the Use of requests to download binary rule: Detects the use of the requests module to download a remote binary file
+
+The file README.md matches the Use of requests to download binary rule: Detects the use of the requests module to download a remote binary file
+
+The file README.rst matches the Use of requests to download binary rule: Detects the use of the requests module to download a remote binary file
+
+The file PKG-INFO matches the Use of requests to download binary rule: Detects the use of the requests module to download a remote binary file
+
+fedjax
+No issues detected in source code.
+sldghmmr4nut
+No issues detected in source code.
+microclient
+No issues detected in source code.
+tess-zap
+No issues detected in source code.
+repsys-framework
+No issues detected in source code.
+stringtoiso
+No issues detected in source code.
+blastbot-cloud-api-python
+No issues detected in source code.
+firebolt-sqlalchemy
+No issues detected in source code.
+projectlayout
+No issues detected in source code.
+check-ezproxy
+No issues detected in source code.
+google-cloud-bigquery-biglake
+No issues detected in source code.
+bztt-checksoftware
+No issues detected in source code.
+django-estimators
+No issues detected in source code.
+pycoranking
+No issues detected in source code.
+An error occurred: Compressed file for ulipad does not exist on PyPI.
+ulipad
+No issues detected in source code.
+An error occurred: Received status code: 404 from PyPI
+pxinfopkg
+No issues detected in source code.
+py-localtunnel
+No issues detected in source code.
