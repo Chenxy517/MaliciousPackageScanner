@@ -14,7 +14,7 @@ class Analyzer:
 class SourceAnalyzer(Analyzer):
     def __init__(self, ecosystem: str):
         super().__init__(ecosystem)
-        rules_dir = os.path.join("rules", ecosystem.lower())
+        rules_dir = os.path.join("sourcecode", "rules", ecosystem.lower())
         self.rules = self._load_rules(rules_dir)
 
 
