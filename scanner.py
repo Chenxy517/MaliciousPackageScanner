@@ -20,6 +20,7 @@ from typing import Optional, Tuple
 from typing import List
 from whois.parser import PywhoisError
 
+
 """
 Analyzer is the parent class of npm_analyzer and pypi_analyzer
 """
