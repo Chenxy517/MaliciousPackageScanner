@@ -7,6 +7,7 @@ Apart from these two main functions, we also built interfaces to download packag
 ## Run
 ```shell
 git clone https://github.com/Chenxy517/MaliciousPackageScanner.git
+cd MaliciousPackageScanner
 python scanner.py
 ```
 ## Evaluation
