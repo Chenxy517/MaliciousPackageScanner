@@ -1,6 +1,6 @@
 import os
-from download_compress import download_compressed
-from pypi_get_json import get_package_info
+from interfaces.download_compress import download_compressed
+from interfaces.pypi_get_json import get_package_info
 
 def download_package(package_name, directory, version=None) -> str:
         """Downloads the PyPI distribution for a given package and version

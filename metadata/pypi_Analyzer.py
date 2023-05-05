@@ -7,7 +7,7 @@ from typing import Optional
 from dateutil import parser
 from packaging import version
 
-from Analyzer import Analyzer
+from metadata.Analyzer import Analyzer
 
 
 class pypi_Analyzer(Analyzer):

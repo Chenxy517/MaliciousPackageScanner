@@ -3,7 +3,7 @@ import pathlib
 import typing
 from urllib.parse import urlparse
 import os
-from download_compress import download_compressed
+from interfaces.download_compress import download_compressed
 
 def download_and_get_package_info(directory: str, package_name: str, version=None) -> typing.Tuple[dict, str]:
     git_target = None

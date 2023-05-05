@@ -7,7 +7,7 @@ from typing import Optional
 
 from dateutil import parser
 
-from Analyzer import Analyzer
+from metadata.Analyzer import Analyzer
 
 
 class npm_Analyzer(Analyzer):
